@@ -15,7 +15,7 @@ export const productsList = [
     name: "Футболка аниме клинок рассекающий демонов, чёрный цвет, 46 размер, 100% хлопок",
     price: "10 000",
     oldPrice: "20 000",
-    imageUrl: "../images/products/1.png",
+    imageUrl: "./images/products/1.png",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const productsList = [
     name: "Футболка магическая битва",
     price: "10 000",
     oldPrice: "20 000",
-    imageUrl: "../images/products/2.png",
+    imageUrl: "./images/products/2.png",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ export const productsList = [
     name: "Футболка-аниме клинок, рассекающий демонов, черный",
     price: "10 000",
     oldPrice: "20 000",
-    imageUrl: "../images/products/3.png",
+    imageUrl: "./images/products/3.png",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const productsList = [
     name: "Футболка-аниме клинок, рассекающий демонов, черный",
     price: "10 000",
     oldPrice: "20 000",
-    imageUrl: "../images/products/4.png",
+    imageUrl: "./images/products/4.png",
   },
 ];
 
@@ -47,48 +47,48 @@ export const collectionsList = [
   {
     id: 1,
     name: "Магическая битва",
-    imageUrl: "../images/collections/1.png",
+    imageUrl: "./images/collections/1.png",
   },
   {
     id: 2,
     name: "Человек-бензопила",
-    imageUrl: "../images/collections/9.png",
+    imageUrl: "./images/collections/9.png",
   },
   {
     id: 3,
     name: "Евангелион",
-    imageUrl: "../images/collections/4.png",
+    imageUrl: "./images/collections/4.png",
   },
   {
     id: 4,
     name: "Клинок рассекающий демонов",
-    imageUrl: "../images/collections/7.png",
+    imageUrl: "./images/collections/7.png",
   },
 
   {
     id: 5,
     name: "Берсерк",
-    imageUrl: "../images/collections/5.png",
+    imageUrl: "./images/collections/5.png",
   },
   {
     id: 6,
     name: "Евангелион2",
-    imageUrl: "../images/collections/4.png",
+    imageUrl: "./images/collections/4.png",
   },
   {
     id: 7,
     name: "Клинок рассекающий демонов3",
-    imageUrl: "../images/collections/7.png",
+    imageUrl: "./images/collections/7.png",
   },
   {
     id: 8,
     name: "One-Punch Man",
-    imageUrl: "../images/collections/8.png",
+    imageUrl: "./images/collections/8.png",
   },
   {
     id: 9,
     name: "One-Punch Man",
-    imageUrl: "../images/collections/8.png",
+    imageUrl: "./images/collections/8.png",
   },
 ];
 
