@@ -1,0 +1,47 @@
+@use "sass:map";
+@use "./base" as *;
+
+.catalog {
+  color: map.get($colors, "primary-dark");
+  &__title {
+    font-size: 30px;
+    margin: 60px 0 20px;
+  }
+  &__container {
+    overflow-x: auto;
+    position: relative;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    width: max-content;
+    scroll-snap-align: start;
+  }
+  &_list-view {
+    .catalog__container {
+      overflow-x: visible;
+      scroll-snap-type: none;
+    }
+    .catalog__list {
+      flex-direction: column;
+      width: 100%;
+      gap: 30px;
+    }
+
+    .slider-indicator {
+      display: none;
+    }
+
+    .product-card {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}

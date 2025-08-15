@@ -25,6 +25,8 @@
     "sass": "^1.90.0",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
+    "svg-sprite-loader": "^6.0.11",
+    "svgo-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.14",
     "webpack": "^5.101.1",
     "webpack-cli": "^6.0.1",

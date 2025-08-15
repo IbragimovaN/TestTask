@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "./base" as *;
+
+.button {
+  width: 196px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: map.get($colors, "primary-dark");
+  display: flex;
+  flex-direction: row;
+  padding: 20px 28px;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin: 20px auto;
+  color: map.get($colors, "white");
+  font-size: 14px;
+  letter-spacing: 5%;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+}

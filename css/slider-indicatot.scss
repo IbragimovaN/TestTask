@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "./base" as *;
+.slider-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  z-index: 1000;
+  width: 49px;
+  height: 5px;
+
+  &__bar {
+    width: 14px;
+    height: 5px;
+    background-color: map.get($colors, "bg-gray2");
+    transition: all 0.3s ease;
+    border-radius: 2px;
+
+    &_active {
+      height: 5px;
+      background-color: map.get($colors, "primary-dark");
+    }
+  }
+  &_none {
+    display: none;
+  }
+}

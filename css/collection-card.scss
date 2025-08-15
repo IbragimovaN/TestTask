@@ -1,0 +1,142 @@
+@use "sass:map";
+@use "./base" as *;
+
+.collection-card {
+  margin-bottom: 10px;
+  width: 340px;
+  height: 180px;
+  background-color: map.get($colors, "primary-dark");
+  border-radius: 20px;
+  padding: 0 0 12.5px 12px;
+  display: grid;
+  grid-template: 24px 56px 1fr / minmax(140px, 152px) 1fr;
+  column-gap: 40px;
+  &__subtitle {
+    margin-top: 12.5px;
+    font-size: 10px;
+    letter-spacing: 5%;
+    text-transform: uppercase;
+    color: map.get($colors, "text-gray-light");
+  }
+  &__title {
+    margin-top: 4px;
+    grid-column: 1;
+    grid-row-start: 2;
+    font-size: 14px;
+    line-height: 140%;
+    max-width: 80%;
+
+    color: map.get($colors, "white");
+  }
+  &__image {
+    width: 136px;
+    height: 180px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    justify-self: end;
+    object-fit: cover;
+  }
+  &__button {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: end;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: map.get($colors, "text-gray");
+    color: map.get($colors, "white");
+  }
+}
+
+@media (min-width: 744px) {
+  .collection-card {
+    width: 228px;
+    height: 257px;
+    padding: 0;
+    grid-template: 36px 20px 1fr/1fr;
+    padding-left: 12px;
+    &__image {
+      width: 135px;
+      height: 178px;
+      grid-row-start: 3;
+      grid-column-start: 1;
+      align-self: end;
+      justify-self: end;
+    }
+    &__button {
+      margin-bottom: 13px;
+    }
+    &__subtitle {
+      grid-row-start: 1px;
+      margin-bottom: 4px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .collection-card {
+    min-width: 275px;
+    width: 100%;
+    min-height: 178px;
+    grid-template: 26px 40px 1fr/ 1fr 1fr;
+    padding: 0 0 12px 12px;
+    gap: 4px;
+    &__title {
+      min-width: 100%;
+    }
+    &__subtitle {
+      margin-top: 12px;
+    }
+
+    &__image {
+      grid-column: 2;
+      grid-row: 1 / repeat 2;
+      max-height: 178px;
+    }
+
+    &:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+      height: 100%;
+    }
+    &:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+      height: 100%;
+    }
+    &:nth-child(3) {
+      grid-column: 3;
+      grid-row: 1;
+      height: 100%;
+    }
+    &:nth-child(4) {
+      grid-column: 4;
+      grid-row: 1 / span 2;
+      height: 100%;
+    }
+    &:nth-child(5) {
+      grid-column: 1;
+      grid-row: 2 / span 2;
+      height: 100%;
+    }
+    &:nth-child(6) {
+      grid-column: 2;
+      grid-row: 3;
+      height: 100%;
+    }
+    &:nth-child(7) {
+      grid-column: 3;
+      grid-row: 3;
+      height: 100%;
+    }
+    &:nth-child(8) {
+      grid-column: 4;
+      grid-row: 3;
+      height: 100%;
+    }
+    &:nth-child(9) {
+      grid-column: 1;
+      grid-row: 4;
+      height: 100%;
+    }
+  }
+}

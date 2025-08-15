@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "./base" as *;
+
+.hover-menu_none {
+  display: none !important;
+}
+.hover-menu {
+  position: absolute;
+  width: 968px;
+  height: 296px;
+  background-color: map.get($colors, "white");
+  border-radius: 20px;
+  top: 55px;
+  left: clamp(20px, 8vw, 267px);
+  padding: 30px;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, auto);
+    color: map.get($colors, "primary-dark");
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    row-gap: 12px;
+    column-gap: 40px;
+  }
+  &__item {
+    height: 19px;
+  }
+}

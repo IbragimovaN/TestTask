@@ -1,0 +1,101 @@
+@use "sass:map";
+@use "./base" as *;
+
+.product-card {
+  color: inherit;
+  padding: 20px 20px 19px 20px;
+  width: 340px;
+  height: 462px;
+  border-radius: 20px;
+  position: relative;
+  background-color: map.get($colors, "white");
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+  &__header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    width: 340px;
+    justify-content: space-between;
+  }
+  &__mark {
+    font-size: 14px;
+    letter-spacing: 5%;
+  }
+  &__favorites-icon {
+    width: 20px;
+    height: 20px;
+
+    stroke: map.get($colors, "primary-dark");
+    fill: #fff;
+  }
+  &__favorites_active {
+    fill: map.get($colors, "accent");
+    transition: fill 0.3s ease;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &_image {
+      width: 260px;
+      height: 260px;
+      margin-bottom: 30px;
+    }
+    &_collection-name {
+      width: 243px;
+      height: 25px;
+      text-transform: uppercase;
+      background-color: map.get($colors, "bg-gray");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 5%;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    &_product-name {
+      width: 300px;
+      font-size: 18px;
+
+      text-align: center;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+    }
+
+    &_price-container {
+      width: 163px;
+      height: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &_price {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    &_old-price {
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: line-through;
+      color: map.get($colors, "text-gray-light");
+    }
+  }
+}
+@media (min-width: 744px) {
+  .product-card {
+    width: 347px;
+    height: 462px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+}
